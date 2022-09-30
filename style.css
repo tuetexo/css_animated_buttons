@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 2rem 4rem;
+}
+
+button {
+  font-size: 3.5rem;
+  border-style: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Border-Left-Right - BUTTON #1 */
+
+.borderLeftRight {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+.borderLeftRight::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.borderLeftRight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Visible-Left-Right - BUTTON #2 */
+
+.visibleBorderLeftRight {
+  display: inline-block;
+  color: #000000;
+  position: relative;
+}
+
+.visibleBorderLeftRight::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.visibleBorderLeftRight:hover::after {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+/* Border-Fade - BUTTON #3 */
+
+.borderFade {
+  padding-bottom: 1px;
+  color: #000000;
+  position: relative;
+}
+
+.borderFade::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(3px);
+  background: #000000;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.borderFade:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Magnify-Text - BUTTON #4 */
+
+.magnifyText {
+  color: #000000;
+  transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.magnifyText:hover {
+  transform: scale(1.15);
+  color: #000000;
+}
+
+.magnifyText:active {
+  transform: scale(0.9);
+}
+
+/* Overlay-Left-Button - BUTTON #5 */
+
+.overlayLeftBtn {
+  padding: 2rem 4rem;
+  background-color: #e9e9e9;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlayLeftBtn span {
+  color: #000000;
+  position: relative;
+  z-index: 1;
+  transition: color 0.25s cubic-bezier(0.7, 0, 0.9, 1);
+}
+
+.overlayLeftBtn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 6px;
+  transform: translate(-101%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  transition: transform 0.25s cubic-bezier(0.7, 0, 0.9, 1);
+}
+
+.overlayLeftBtn:hover span {
+  color: #ffffff;
+}
+
+.overlayLeftBtn:hover::before {
+  transform: translate(0, -50%);
+}
+
+/* Circle-Scale-Button - BUTTON #6 */
+
+.circleScaleBtn {
+  padding: 2rem 4rem;
+  background-color: #e9e9e9;
+  color: #000000;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.circleScaleBtn span {
+  z-index: 1;
+  position: relative;
+}
+
+.circleScaleBtn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #000000;
+  opacity: 0;
+}
+
+.circleScaleBtn:hover span {
+  color: #ffffff;
+}
+
+.circleScaleBtn:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+/* Snaple-Left-Button - BUTTON #7 */
+
+.snapLeftBtn {
+  padding: 2rem 4rem;
+  text-align: center;
+  background-color: #e9e9e9;
+  position: relative;
+  border-radius: 6px;
+  color: #000000;
+  overflow: hidden;
+}
+
+.snapLeftBtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transform: translateX(-101%);
+  background: #000000;
+  transition: transform 0.25s ease-in;
+}
+
+.snapLeftBtn:hover::before {
+  transform: translateX(0);
+}
+
+.snapLeftBtn span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  transition: color 0.1s 0.15s ease-in;
+}
+
+.snapLeftBtn:hover span {
+  color: #ffffff;
+  animation: animButtonSpan 0.4s;
+}
+
+@keyframes animButtonSpan {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  50.001% {
+    transform: translateX(-20px);
+  }
+
+  60% {
+    transform: translateX(0px);
+  }
+}
