@@ -1,0 +1,107 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.borderLeftRight {
+    background-color: #fff;
+    border: 2px solid #007bff;
+}
+
+.borderLeftRight:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.visibleBorderLeftRight {
+    background-color: #007bff;
+    color: white;
+}
+
+.visibleBorderLeftRight:hover {
+    background-color: #0056b3;
+}
+
+.borderFade {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.borderFade:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.magnifyText {
+    background-color: #28a745;
+    color: white;
+}
+
+.magnifyText:hover {
+    transform: scale(1.05);
+}
+
+.overlayLeftBtn {
+    background-color: #ffc107;
+    color: white;
+    position: relative;
+}
+
+.overlayLeftBtn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlayLeftBtn:hover::after {
+    opacity: 1;
+}
+
+.circleScaleBtn {
+    background-color: #17a2b8;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleScaleBtn:hover {
+    transform: scale(1.1);
+}
+
+.snapLeftBtn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.snapLeftBtn:hover {
+    background-color: #5a6268;
+    transform: translateX(-5px);
+}
