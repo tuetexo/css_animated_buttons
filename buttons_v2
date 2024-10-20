@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <title>Filiq | Buttons</title>
+</head>
+<body>
+    <section class="buttons" role="group" aria-labelledby="buttons-title">
+        <h2 id="buttons-title" class="sr-only">Button Examples</h2>
+        
+        <button class="borderLeftRight" aria-label="Button for action 1" tabindex="0">Text 1</button>
+        <button class="visibleBorderLeftRight" aria-label="Button for action 2" tabindex="0">Text 2</button>
+        <button class="borderFade" aria-label="Button for action 3" tabindex="0">Text 3</button>
+        <button class="magnifyText" aria-label="Button for action 4" tabindex="0">Text 4</button>
+        <button class="overlayLeftBtn" aria-label="Button for action 5" tabindex="0">Text 5</button>
+        <button class="circleScaleBtn" aria-label="Button for action 6" tabindex="0">Text 6</button>
+        <button class="snapLeftBtn" aria-label="Button for action 7" tabindex="0">Text 7</button>
+    </section>
+</body>
+</html>
