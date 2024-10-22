@@ -1,0 +1,63 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.borderLeftRight {
+    border: 2px solid #000;
+}
+
+.visibleBorderLeftRight {
+    border: 2px solid #000;
+    background-color: white;
+}
+
+.borderFade {
+    background-color: #f0f0f0;
+}
+
+.magnifyText:hover {
+    transform: scale(1.1);
+}
+
+.overlayLeftBtn {
+    position: relative;
+}
+
+.circleScaleBtn {
+    border-radius: 50%;
+    width: 50px;  /* Adjust width and height */
+    height: 50px; 
+}
+
+.snapLeftBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #e0e0e0; /* Light hover effect */
+}
+
+button:focus {
+    outline: 3px solid #007bff; /* Focus outline for accessibility */
+}
